@@ -1,0 +1,25 @@
+<div class="container ">
+    <div class="row">
+
+        <div class="card text-center">
+            <div class="card-header bg-danger text-white">
+              <p>MIS REPORTES <i class="fa-solid fa-circle-exclamation"></i></p>
+              
+            </div>
+            <div class="card-body">
+                <a routerLink="/reportar" class="btn btn-warning mb-2">Crear reporte</a>
+                <ul class="list-group">
+                    <li *ngFor="let suceso of sucesos" (click)="saludo(suceso.id)" class="list-group-item d-flex justify-content-between align-items-center">
+                        <i class="fa-solid fa-bell fa-2x text-danger"></i> Reportado el: {{suceso.fecha}}
+                      <i class="fa-solid fa-circle-right fa-2x text-success"></i>
+                    </li>
+                    
+                  </ul>
+            </div>
+            <div class="card-footer text-muted">
+              SYSO-ITCHA
+            </div>
+          </div>
+
+    </div>
+</div>
